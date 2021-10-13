@@ -1,0 +1,28 @@
+#I used https://rpubs.com/ninjazzle/DS-JHU-3-4-Final a lot
+#install library(dplyr) #library(tidyverse)
+#set directory setwd("C:/Users/Charlotte/Census/Coursera/NewNumber4")
+#download ZIP and unpack filename <- "Coursera_DS3_Final.zip"
+
+#Load the unzipped files
+
+# load features.txt. It is a list of all features 
+# col.names names columns in the table = "n" and "functons"
+#load activity_labels. These are the activities performed
+# col.names names columns = "code" & "activity
+activities <- read.table("UCI HAR Dataset/activity_labels.txt", col.names = c("code", "activity"))
+
+LOad all TEST FILES with same column names
+Also use features$functions above
+
+Join the two files.
+#Adds column names via the contents of features using the functions column features$functions
+#Merge x_train & x_test data sets using the columns from features$functions
+#Merge y_train & y_test data sets using the column = Code
+#Merge subject_train & subject_test data sets using. They both use the column = Subject
+#Merge Subject, X, & Y datasets
+
+# USe select on Merged_Data We want to get measurements on the mean and standard deviation from Merged_Data.
+#Updated joined column names
+
+
+#create new data set from TidyData with mean for activties
